@@ -7,7 +7,6 @@ import java.util.Arrays;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.testng.Assert.*;
 
 public class StatisticsTest {
 
@@ -30,6 +29,15 @@ public class StatisticsTest {
     }
 
     @Test
+    public void testComputeMeanOfZero() {
+        Statistics statistics = new Statistics();
+
+        double[] numbers = new double[0];
+        double actual = statistics.computeMean(numbers);
+        assertThat("mean of: " + Arrays.toString(numbers), actual, is(equalTo(0d)));
+    }
+
+    @Test
     public void testComputeMedianOfEvenNumberOfItems() {
         Statistics statistics = new Statistics();
 
@@ -45,6 +53,15 @@ public class StatisticsTest {
         double[] grades = {75, 80, 80, 85, 93, 94, 96};
         double actual = statistics.computeMedian(grades);
         assertThat("median of: " + Arrays.toString(grades), actual, is(equalTo(85d)));
+    }
+
+    @Test
+    public void testComputeMedianOfZero() {
+        Statistics statistics = new Statistics();
+
+        double[] numbers = new double[0];
+        double actual = statistics.computeMedian(numbers);
+        assertThat("mean of: " + Arrays.toString(numbers), actual, is(equalTo(0d)));
     }
 
     @Test
@@ -66,4 +83,16 @@ public class StatisticsTest {
         double[] expected = {10, 11};
         assertThat("mode of: " + Arrays.toString(numbers), actual, is(expected));
     }
+
+
+    @Test
+    public void testComputeModeOfZero() {
+        Statistics statistics = new Statistics();
+
+        double[] numbers = new double[0];
+        double[] actual = statistics.computeMode( numbers );
+        double[] expected = new double[0];
+        assertThat( "mean of: " + Arrays.toString( numbers ), actual, is( expected ) );
+    }
+
 }
