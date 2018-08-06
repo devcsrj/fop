@@ -11,13 +11,13 @@ public class StarTest {
     @Test
     public void testPyramid() {
 
-        String expected = "*" +
-                "**" +
-                "***" +
-                "****" +
-                "*****" +
-                "******" +
-                "*******";
+        String expected = "*\n" +
+                "**\n" +
+                "***\n" +
+                "****\n" +
+                "*****\n" +
+                "******\n" +
+                "*******\n";
 
         Star star = new Star();
         String actual = star.pyramid(7);
@@ -28,9 +28,9 @@ public class StarTest {
     @Test
     public void testPyramidAgain() {
 
-        String expected = "*" +
-                "**" +
-                "***";
+        String expected = "*\n" +
+                "**\n" +
+                "***\n";
 
         Star star = new Star();
         String actual = star.pyramid(3);
@@ -40,9 +40,9 @@ public class StarTest {
 
     @Test
     public void testInvertedPyramid() {
-        String expected = "***" +
-                "**" +
-                "*";
+        String expected = "***\n" +
+                "**\n" +
+                "*\n";
 
         Star star = new Star();
         String actual = star.invertedPyramid(3);
@@ -52,13 +52,13 @@ public class StarTest {
 
     @Test
     public void testInvertedPyramidAgain() {
-        String expected = "*******" +
-                "******" +
-                "*****" +
-                "****" +
-                "***" +
-                "**" +
-                "*";
+        String expected = "*******\n" +
+                "******\n" +
+                "*****\n" +
+                "****\n" +
+                "***\n" +
+                "**\n" +
+                "*\n";
 
         Star star = new Star();
         String actual = star.invertedPyramid(7);

@@ -33,9 +33,9 @@ public class StatisticsTest {
     public void testComputeMedianOfEvenNumberOfItems() {
         Statistics statistics = new Statistics();
 
-        double[] grades = {75, 80, 80, 85, 87, 93, 94, 96};
+        double[] grades = {75, 80, 80, 85, 89, 93, 94, 96};
         double actual = statistics.computeMedian(grades);
-        assertThat("median of: " + Arrays.toString(grades), actual, is(equalTo(86d)));
+        assertThat("median of: " + Arrays.toString(grades), actual, is(equalTo(87d)));
     }
 
     @Test
